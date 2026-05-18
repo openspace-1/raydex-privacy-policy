@@ -1,102 +1,360 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy | Raydex</title>
-  <style>
-    body { font-family: "Inter", "Segoe UI", system-ui, sans-serif; line-height: 1.7; margin: 0; padding: 0; background: #eef2ff; color: #111827; }
-    .page { max-width: 920px; margin: 0 auto; padding: 32px 24px 48px; }
-    .hero { background: linear-gradient(180deg, #4f46e5 0%, #6366f1 100%); border-radius: 24px; color: white; padding: 36px 28px; box-shadow: 0 20px 60px rgba(99, 102, 241, 0.18); margin-bottom: 28px; }
-    .hero h1 { font-size: clamp(2rem, 3vw, 2.8rem); margin: 0 0 16px; line-height: 1.05; }
-    .hero p { max-width: 760px; margin: 0; font-size: 1rem; opacity: 0.94; }
-    h1, h2, h3 { color: #111827; }
-    h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
-    h2 { margin-top: 2rem; font-size: 1.6rem; }
-    h3 { margin-top: 1.2rem; font-size: 1.2rem; }
-    p, ul { margin: 1rem 0; }
-    ul { padding-left: 1.5rem; }
-    li { margin-bottom: 0.45rem; }
-    .note { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 18px; margin: 24px 0; border-radius: 12px; }
-    a { color: #4338ca; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .meta { color: #4b5563; font-size: 0.98rem; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Raydex</title>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e293b;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .page { max-width: 840px; margin: 0 auto; }
+        .paper {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            padding: 3rem 3.5rem;
+        }
+        @media (max-width: 640px) {
+            body { padding: 1rem 0.5rem; }
+            .paper { padding: 1.75rem 1.25rem; border-radius: 12px; }
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #eef2f6;
+            margin-bottom: 2.5rem;
+        }
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+        }
+        .header .sub {
+            margin-top: 0.4rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        .header .sub strong { color: #334155; }
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 2.5rem;
+        }
+        .toc summary {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #0f172a;
+            cursor: pointer;
+            user-select: none;
+        }
+        .toc ol {
+            margin-top: 0.75rem;
+            columns: 2;
+            column-gap: 2rem;
+            list-style: none;
+            counter-reset: toc-counter;
+        }
+        .toc ol li { counter-increment: toc-counter; margin-bottom: 0.35rem; break-inside: avoid; }
+        .toc ol li::before {
+            content: counter(toc-counter) ".";
+            font-weight: 600;
+            color: #3b82f6;
+            margin-right: 0.4rem;
+        }
+        .toc ol li a { color: #2563eb; text-decoration: none; font-size: 0.9rem; }
+        .toc ol li a:hover { text-decoration: underline; }
+        @media (max-width: 640px) { .toc ol { columns: 1; } }
+        section { margin-bottom: 2.25rem; }
+        section h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem;
+        }
+        section h2 .num {
+            color: #3b82f6;
+            font-weight: 700;
+            min-width: 1.8rem;
+        }
+        section p, section li { font-size: 0.95rem; color: #334155; }
+        section p  { margin-bottom: 0.8rem; }
+        section ul, section ol { margin: 0.5rem 0 0.8rem 1.4rem; }
+        section li { margin-bottom: 0.35rem; }
+        section .note {
+            background: #fef9ee;
+            border-left: 4px solid #f59e0b;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            margin-top: 0.6rem;
+        }
+        .back-top {
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+        }
+        .back-top a {
+            color: #64748b;
+            text-decoration: none;
+        }
+        .back-top a:hover { color: #2563eb; }
+        hr { border: none; border-top: 1px solid #e2e8f0; margin: 2.5rem 0 1rem; }
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            padding-top: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-  <div class="page">
-    <div class="hero">
-      <h1>Privacy Policy for Raydex</h1>
-      <p>Raydex is an AI-powered document scanner and OCR app with on-device processing, PDF export, and AdMob-supported advertising. This statement explains how your data is handled when using the app via Google Play Store.</p>
+<div class="page">
+<div class="paper">
+
+    <div class="header">
+        <h1>Privacy Policy</h1>
+        <p class="sub"><strong>Raydex</strong> &mdash; Document Scanner App</p>
+        <p class="sub">Package: <strong>com.document.raydex</strong> | Platform: <strong>Android</strong></p>
+        <p class="sub">Last updated: <strong>May 19, 2026</strong></p>
     </div>
 
-    <p class="meta">Effective date: May 17, 2026</p>
+    <details class="toc" open>
+        <summary>Table of Contents</summary>
+        <ol>
+            <li><a href="#sec1">Introduction</a></li>
+            <li><a href="#sec2">Information We Collect</a></li>
+            <li><a href="#sec3">Information We Do NOT Collect</a></li>
+            <li><a href="#sec4">How We Use Your Information</a></li>
+            <li><a href="#sec5">Data Storage &amp; Security</a></li>
+            <li><a href="#sec6">Third-Party Services</a></li>
+            <li><a href="#sec7">Advertising &amp; Google Mobile Ads</a></li>
+            <li><a href="#sec8">Your Privacy Rights</a></li>
+            <li><a href="#sec9">GDPR Rights (EU/EEA/UK/CH)</a></li>
+            <li><a href="#sec10">CCPA/CPRA Rights (California)</a></li>
+            <li><a href="#sec11">Children's Privacy</a></li>
+            <li><a href="#sec12">Data Retention &amp; Deletion</a></li>
+            <li><a href="#sec13">International Data Transfers</a></li>
+            <li><a href="#sec14">Changes to This Policy</a></li>
+            <li><a href="#sec15">Contact Us</a></li>
+        </ol>
+    </details>
 
-    <p>Welcome to Raydex. This Privacy Policy explains how Raydex collects, uses, and protects information when you use the Raydex Android app distributed through Google Play Store.</p>
+    <!-- 1 -->
+    <section id="sec1">
+        <h2><span class="num">1.</span> Introduction</h2>
+        <p>Raydex is a privacy-first document scanning application for Android devices. This Privacy Policy explains how we collect, use, disclose, and otherwise process information related to your use of the Raydex mobile application (the "App").</p>
+        <p><strong>Our Privacy Commitment:</strong> We believe privacy is a fundamental right. Raydex is designed to minimize data collection. All your scanned documents, photos, and generated PDFs are processed and stored exclusively on your device. We do not upload your content to our servers or any third-party cloud service.</p>
+        <p>By downloading and using Raydex, you consent to this Privacy Policy. If you do not agree with our practices, please do not use the App.</p>
+    </section>
 
-    <h2>1. What this app does</h2>
-    <p>Raydex is an on-device document scanner and OCR app that converts camera images into searchable documents and PDF files. The app offers document scanning, image editing, OCR text recognition, and multi-page PDF export.</p>
+    <!-- 2 -->
+    <section id="sec2">
+        <h2><span class="num">2.</span> Information We Collect</h2>
+        <p>We collect minimal information. Here is what we may collect or receive:</p>
+        <ul>
+            <li><strong>Device Identifiers (via Google Mobile Ads).</strong> If you grant consent for personalized advertising via the Google User Messaging Platform (UMP) Consent Form, Google Mobile Ads may collect your Advertising ID (GAID), IP address, and device information (model, OS version, screen size) for ad serving and measurement.</li>
+            <li><strong>Consent Preferences.</strong> We store your privacy consent choices locally on your device using local storage (SharedPreferences). These choices are not sent to our servers.</li>
+            <li><strong>Crash Data (Future).</strong> In future versions, we may integrate Firebase Crashlytics to collect anonymized crash reports. This will be disclosed before implementation.</li>
+        </ul>
+        <p class=\"note\"><strong>No Personal Information:</strong> We do NOT collect your name, email, phone number, location, or any other personally identifiable information.</p>
+    </section>
 
-    <h2>2. On-device processing</h2>
-    <p>Raydex processes all scanned documents locally on your device. Document images, OCR text, and PDF files are processed and stored on the device only. We do not upload your scanned images or text to any external server for processing.</p>
+    <!-- 3 -->
+    <section id="sec3">
+        <h2><span class="num\">3.</span> Information We Do NOT Collect</h2>
+        <p>To be completely transparent about our privacy practices, here is what Raydex does <strong>NOT</strong> collect:</p>
+        <ul>
+            <li><strong>Your Documents.</strong> Scanned documents, photos, images, extracted text, and PDFs are never uploaded to our servers. They remain exclusively on your device.</li>
+            <li><strong>Location Data.</strong> We do not request, collect, or use your GPS location, cellular location, or any approximate location.</li>
+            <li><strong>Personal Identifiers.</strong> We do not collect your name, email address, phone number, username, address, or any other personal information.</li>
+            <li><strong>Financial Information.</strong> We do not collect credit card numbers, bank account information, or any payment details.</li>
+            <li><strong>App Usage Analytics.</strong> We do not track which features you use, how frequently you use them, or how long you spend in the App.</li>
+            <li><strong>Browsing History.</strong> We do not track websites you visit outside the App.</li>
+            <li><strong>Contacts, Calendars, or System Data.</strong> We do not access your device contacts, calendar events, installed apps, call history, text messages, or detailed system information.</li>
+            <li><strong>Cookies or Tracking Technologies.</strong> The App does not use cookies, web beacons, or similar tracking technologies.</li>
+        </ul>
+    </section>
 
-    <h2>3. Information we collect</h2>
-    <p>Raydex is designed to collect minimal data. The app does not require registration, and it does not collect personal account information.</p>
+    <!-- 4 -->
+    <section id="sec4">
+        <h2><span class=\"num\">4.</span> How We Use Your Information</h2>
+        <p>We use the limited information we collect for the following purposes:</p>
+        <ul>
+            <li><strong>Ad Serving.</strong> If you consent to personalized advertising, we allow Google Mobile Ads to use your Advertising ID and device information to serve targeted advertisements within the App.</li>
+            <li><strong>Consent Management.</strong> We store your privacy and advertising consent choices to respect your preferences across app sessions.</li>
+            <li><strong>Legal Compliance.</strong> We may use information to comply with applicable laws, regulations, and legal processes.</li>
+            <li><strong>App Improvement (Future).</strong> With your explicit opt-in, we may collect anonymized crash data in future versions to identify and fix bugs.</li>
+        </ul>
+        <p><strong>We do not:</strong> Sell your data, share your data with third parties for marketing, use your data for profiling or automated decision-making, or retain your data longer than necessary.</p>
+    </section>
 
-    <h3>3.1 Data collected for app functionality</h3>
-    <ul>
-      <li>Camera access: required only to scan physical documents.</li>
-      <li>Storage access: required to save scanned documents, exported PDFs, and images on your device.</li>
-      <li>Local OCR data: the text recognized from your documents remains on your device.</li>
-    </ul>
+    <!-- 5 -->
+    <section id="sec5">
+        <h2><span class=\"num\">5.</span> Data Storage &amp; Security</h2>
+        <p><strong>On-Device Storage.</strong> All your scanned documents, images, extracted text, PDFs, and app settings are stored locally on your device using:</p>
+        <ul>
+            <li><strong>Hive Database:</strong> Local on-device NoSQL database for document metadata and app data</li>
+            <li><strong>Device File System:</strong> For storing scanned images and generated PDFs</li>
+        </ul>
+        <p><strong>Server Storage.</strong> We do NOT store your documents, images, or any user content on our servers. Your data never leaves your device.</p>
+        <p><strong>Security Measures.</strong> We implement industry-standard security practices for the information we do collect (consent preferences):</p>
+        <ul>
+            <li>Local storage uses device-level encryption</li>
+            <li>All network communications (ads, consent) use HTTPS/TLS encryption</li>
+            <li>No sensitive data is logged or transmitted in plain text</li>
+            <li>App uses ProGuard/R8 code obfuscation for compiled release builds</li>
+        </ul>
+        <p class=\"note\"><strong>Limitation:</strong> While we implement reasonable security measures, no method of transmission or local storage is 100% secure. You are responsible for maintaining the security and regular backups of your device.</p>
+    </section>
 
-    <h3>3.2 Data we do not collect</h3>
-    <ul>
-      <li>We do not collect your scanned document content.</li>
-      <li>We do not collect GPS location, contacts, calendar entries, call logs, or microphone audio.</li>
-      <li>We do not require an account, email address, or phone number.</li>
-    </ul>
+    <!-- 6 -->
+    <section id="sec6">
+        <h2><span class=\"num\">6.</span> Third-Party Services</h2>
+        <p>Raydex integrates the following third-party services, each with its own privacy policy:</p>
+        <ul>
+            <li><strong>Google ML Kit (Text Recognition).</strong> Performs OCR (optical character recognition) on your device. Images are processed locally and not sent to Google's servers for processing by default. However, diagnostic usage data may be collected if you enable it in device settings. <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google Privacy Policy</a>.</li>
+            <li><strong>Google Mobile Ads (AdMob).</strong> Serves advertisements. May collect your Advertising ID, IP address, device info, and app usage metrics for ad targeting and measurement. <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">Google Ads Technologies</a>.</li>
+            <li><strong>Google User Messaging Platform (UMP).</strong> Manages ad consent. Displays privacy choices and stores consent locally. <a href=\"https://support.google.com/admob/answer/10113207\" target=\"_blank\" rel=\"noopener\">UMP Documentation</a>.</li>
+        </ul>
+        <p>These third-party services may collect information about you in accordance with their own privacy policies. We encourage you to review their privacy practices at the links above.</p>
+    </section>
 
-    <h2>4. Ads and third-party services</h2>
-    <p>Raydex is an ad-supported free app that displays ads through Google AdMob. AdMob may collect limited data such as advertising identifiers and usage signals to provide personalized and non-personalized ads.</p>
-    <p>This app does not control how ad partners use the data collected by Google AdMob. For details, please refer to Google's privacy policy:</p>
-    <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
-    <p>Possible third-party ad-related data may include:</p>
-    <ul>
-      <li>Device identifiers and Google advertising ID</li>
-      <li>IP address</li>
-      <li>App usage and interactions with ads</li>
-      <li>Anonymous analytics and performance data</li>
-    </ul>
+    <!-- 7 -->
+    <section id="sec7">
+        <h2><span class=\"num\">7.</span> Advertising &amp; Google Mobile Ads</h2>
+        <p><strong>Consent-Based Advertising.</strong> Raydex displays advertisements to support free development. Before any ads are shown, you must provide consent through Google's User Messaging Platform (UMP) Consent Form when you first open the App.</p>
+        <p><strong>Personalized Advertising.</strong> If you grant consent, Google Mobile Ads may use your Advertising ID and other device data to show personalized ads based on your interests and app usage.</p>
+        <p><strong>Non-Personalized Advertising.</strong> If you deny consent for personalized ads, you will still see ads, but they will be based only on the content within the App (contextual) and general device information.</p>
+        <p><strong>Changing Your Preferences.</strong> You can change your ad consent preferences at any time:</p>
+        <ul>
+            <li>Open Raydex &gt; Settings &gt; Privacy Settings &gt; Manage Consent</li>
+            <li>Or through device settings: Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization</li>
+        </ul>
+        <p><strong>Note:</strong> Opting out of personalized ads does not reduce ad frequency; ads will simply be less relevant to your interests.</p>
+    </section>
 
-    <p class="note"><strong>Note:</strong> If you choose to click an ad, the privacy practices of the ad source apply. Please review their privacy statements separately.</p>
+    <!-- 8 -->
+    <section id="sec8">
+        <h2><span class=\"num\">8.</span> Your Privacy Rights</h2>
+        <p>You have the following rights regarding your information:</p>
+        <ul>
+            <li><strong>Right to Access.</strong> You have the right to request and receive a copy of all personal data we hold. Since all your data is stored locally on your device, it is directly accessible to you through the App.</li>
+            <li><strong>Right to Delete.</strong> You can delete any documents or data from the App at any time by using the in-app delete function or by clearing App data from device settings.</li>
+            <li><strong>Right to Data Portability.</strong> You can export your scanned documents as PDFs or images in standard formats to transfer them to other devices or services.</li>
+            <li><strong>Right to Opt-Out.</strong> You can opt out of personalized advertising through Privacy Settings or device settings.</li>
+            <li><strong>Right to Object.</strong> You can object to any use of your data by declining consent in the UMP Consent Form.</li>
+        </ul>
+    </section>
 
-    <h2>5. Google Play permissions</h2>
-    <p>Raydex may request the following permissions:</p>
-    <ul>
-      <li><strong>Camera</strong> – to scan physical documents.</li>
-      <li><strong>Storage / Files and media</strong> – to save scanned images, PDF exports, and documents on your device.</li>
-    </ul>
+    <!-- 9 -->
+    <section id="sec9">
+        <h2><span class=\"num\">9.</span> GDPR Rights (EU/EEA/UK/Switzerland)</h2>
+        <p>If you are located in the European Union, European Economic Area, United Kingdom, or Switzerland, you have the following rights under the General Data Protection Regulation (GDPR):</p>
+        <ul>
+            <li><strong>Right of Access (Article 15):</strong> Request a copy of your personal data</li>
+            <li><strong>Right to Rectification (Article 16):</strong> Request correction of inaccurate data</li>
+            <li><strong>Right to Erasure (Article 17):</strong> Request deletion of your data ("right to be forgotten")</li>
+            <li><strong>Right to Restrict Processing (Article 18):</strong> Request that we limit how we use your data</li>
+            <li><strong>Right to Data Portability (Article 20):</strong> Request your data in a portable format</li>
+            <li><strong>Right to Object (Article 21):</strong> Object to processing of your data</li>
+            <li><strong>Right to Non-Automated Decision-Making:</strong> Raydex does not engage in automated profiling or decision-making</li>
+        </ul>
+        <p><strong>How to Exercise Your Rights:</strong> Contact us at <a href=\"mailto:stormxx011@gmail.com\">stormxx011@gmail.com</a> with \"GDPR Request\" in the subject line. We will verify your identity and respond within 30 days as required by law.</p>
+        <p><strong>Legal Basis for Processing:</strong> We process limited data (Advertising ID) only with your explicit consent, which you provide via the UMP Consent Form.</p>
+    </section>
 
-    <h2>6. Analytics and crash reporting</h2>
-    <p>Raydex does not collect personally identifiable analytics by default. If analytics or crash reporting are enabled, they will be limited to anonymous usage metrics and error reports needed to improve app stability.</p>
+    <!-- 10 -->
+    <section id="sec10">
+        <h2><span class=\"num\">10.</span> CCPA/CPRA Rights (California)</h2>
+        <p>If you are a resident of California, you have the following rights under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA):</p>
+        <ul>
+            <li><strong>Right to Know:</strong> Request what personal information we collect about you</li>
+            <li><strong>Right to Delete:</strong> Request deletion of your personal information</li>
+            <li><strong>Right to Opt-Out of Sale:</strong> Opt out of the \"sale\" of your personal information (Raydex does not sell personal data)</li>
+            <li><strong>Right to Correct:</strong> Request correction of inaccurate information</li>
+            <li><strong>Right to Limit Use:</strong> Request that we limit use of your information</li>
+            <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights</li>
+        </ul>
+        <p><strong>How to Exercise Your Rights:</strong> Contact us at <a href=\"mailto:stormxx011@gmail.com\">stormxx011@gmail.com</a> with \"CCPA Request\" in the subject line. We will verify your identity and respond within 45 days as required by law.</p>
+        <p><strong>\"Sale\" of Personal Information:</strong> Raydex does NOT sell your personal information. Google Mobile Ads may use your Advertising ID for ad targeting, which some jurisdictions may consider a \"sale.\" You can opt out through device settings or the App's Privacy Settings.</p>
+    </section>
 
-    <h2>7. Children</h2>
-    <p>Raydex is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal data through the app, please contact us and we will take prompt action.</p>
+    <!-- 11 -->
+    <section id="sec11">
+        <h2><span class=\"num\">11.</span> Children's Privacy</h2>
+        <p>Raydex is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13 without parental consent, we will take steps to delete such information and terminate the child's access to the App.</p>
+        <p><strong>For Children 13-18:</strong> Parents or legal guardians should review and consent to this Privacy Policy on behalf of minors in their care.</p>
+        <p>If you believe we have collected information from a child under 13, please contact us immediately at <a href=\"mailto:stormxx011@gmail.com\">stormxx011@gmail.com</a>.</p>
+    </section>
 
-    <h2>8. Data retention</h2>
-    <p>All scanned documents, recognized text, and exported PDFs remain on your device until you delete them. We do not retain or store your scans on our servers.</p>
+    <!-- 12 -->
+    <section id="sec12">
+        <h2><span class=\"num\">12.</span> Data Retention &amp; Deletion</h2>
+        <p><strong>Retention of Your Documents:</strong> All scanned documents, images, and PDFs you create are retained only on your device for as long as you keep them. We do not retain copies on our servers.</p>
+        <p><strong>Retention of Consent Data:</strong> Your privacy and advertising consent preferences are stored locally on your device indefinitely until you change them.</p>
+        <p><strong>How to Delete Your Data:</strong></p>
+        <ul>
+            <li><strong>Delete Individual Documents:</strong> Use the Delete button in the App to remove specific scans</li>
+            <li><strong>Delete All App Data:</strong> Go to device Settings &gt; Apps &gt; Raydex &gt; Storage &gt; Clear Data</li>
+            <li><strong>Uninstall the App:</strong> Uninstalling Raydex removes all app data from your device</li>
+            <li><strong>Factory Reset:</strong> Resetting your device to factory settings deletes all App data</li>
+        </ul>
+        <p><strong>Backup Responsibility:</strong> You are responsible for creating and maintaining backups of important documents. We do not maintain automatic cloud backups.</p>
+    </section>
 
-    <h2>9. Your rights</h2>
-    <p>You may withdraw consent for permission use by uninstalling the app or revoking permissions from your Android settings. Since Raydex does not maintain user accounts, there is no account data to request or delete from our servers.</p>
+    <!-- 13 -->
+    <section id="sec13">
+        <h2><span class=\"num\">13.</span> International Data Transfers</h2>
+        <p>Raydex is primarily developed and operated in the region where the developer is located. If you are accessing the App from outside that region, your information (particularly Advertising ID from Google Mobile Ads) may be transferred to, stored in, and processed in other jurisdictions.</p>
+        <p>By using Raydex, you consent to the transfer of information to countries that may not have the same data protection laws as your country of residence. We take steps to ensure that international transfers comply with applicable data protection laws, including GDPR Standard Contractual Clauses when applicable.</p>
+    </section>
 
-    <h2>10. Changes to this policy</h2>
-    <p>We may update this privacy policy from time to time. Changes will be posted here with a revised effective date.</p>
+    <!-- 14 -->
+    <section id="sec14">
+        <h2><span class=\"num\">14.</span> Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by updating the \"Last updated\" date at the top of this page.</p>
+        <p>Material changes will be communicated within the App via a notification, and continued use of Raydex following any changes constitutes your acceptance of the revised Privacy Policy.</p>
+        <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.</p>
+    </section>
 
-    <h2>11. Contact</h2>
-    <p>If you have questions about this policy, please contact the app developer through the Play Store listing or email us at <a href="mailto:stormxx011@gmail.com">stormxx011@gmail.com</a>.</p>
+    <!-- 15 -->
+    <section id="sec15">
+        <h2><span class=\"num\">15.</span> Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href=\"mailto:stormxx011@gmail.com\">stormxx011@gmail.com</a></li>
+            <li><strong>Subject Lines for Specific Requests:</strong>
+                <ul>
+                    <li>\"GDPR Request\" for GDPR-related inquiries (EU/EEA/UK/CH)</li>
+                    <li>\"CCPA Request\" for CCPA-related inquiries (California)</li>
+                    <li>\"Privacy Inquiry\" for general privacy questions</li>
+                </ul>
+            </li>
+        </ul>
+        <p>We aim to respond to all inquiries within 5 business days (GDPR: 30 days, CCPA: 45 days for formal requests).</p>
+    </section>
 
-    <p><strong>Raydex: AI Document Scanner &amp; OCR</strong><br>Privacy Policy created for Google Play Store compliance.</p>
-  </div>
+    <hr />
+
+    <p class="back-top"><a href="#">↑ Back to top</a></p>
+
+    <p class="footer">&copy; 2026 Raydex (StormRay). All rights reserved. Package: com.document.raydex</p>
+
+</div>
+</div>
 </body>
 </html>
